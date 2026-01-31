@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | INDUMISO Foundation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="container">
+            <div class="nav-container">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="logo-text">INDUMISO</div>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+
+                <nav class="nav-links" id="navLinks">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <a href="it-development.html"><i class="fas fa-laptop-code"></i> IT Development</a>
+                    <a href="mission.html"><i class="fas fa-bullseye"></i> Our Mission</a>
+                    <a href="programs.html"><i class="fas fa-project-diagram"></i> Programs</a>
+                    <a href="impact.html"><i class="fas fa-chart-line"></i> Impact</a>
+                    <a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Get in Touch</h1>
+                <p>Whether you want to participate, volunteer, partner, or support our mission, we'd love to hear from you</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="programs" style="padding-top: 80px; background: var(--bg-primary);">
+        <div class="container">
+            <h2 class="section-title">How Can We Help You?</h2>
+            
+            <div class="pillars-grid" style="margin-bottom: 80px;">
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Join a Program</h3>
+                    <p>Apply for our IT bootcamps, sustainability programs, or educational initiatives. Transform your future today.</p>
+                    <a href="#contact-form" style="display: inline-block; margin-top: 15px; color: var(--accent); font-weight: 600;">Apply Now ?</a>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Volunteer</h3>
+                    <p>Share your skills as a mentor, instructor, or program coordinator. Make a difference in your community.</p>
+                    <a href="#contact-form" style="display: inline-block; margin-top: 15px; color: var(--accent); font-weight: 600;">Get Involved ?</a>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Partner With Us</h3>
+                    <p>Organizations and businesses can collaborate with us to expand our reach and amplify our impact.</p>
+                    <a href="#contact-form" style="display: inline-block; margin-top: 15px; color: var(--accent); font-weight: 600;">Partner ?</a>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Support Our Work</h3>
+                    <p>Your donation directly funds programs that change lives. Every contribution makes a real difference.</p>
+                    <a href="#contact-form" style="display: inline-block; margin-top: 15px; color: var(--accent); font-weight: 600;">Donate ?</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="it-focus" id="contact-form" style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Send Us a Message</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <form id="contactForm" style="background: var(--glass-bg); backdrop-filter: blur(20px); padding: 50px; border-radius: var(--border-radius); box-shadow: var(--shadow-lg); border: 1px solid var(--glass-border);">
+                    <div style="margin-bottom: 30px;">
+                        <label for="name" style="display: block; margin-bottom: 10px; font-weight: 600; color: var(--text-primary);">Full Name *</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 16px; border: 2px solid rgba(45, 106, 79, 0.2); border-radius: 12px; font-size: 1rem; font-family: 'Lato', sans-serif; transition: var(--transition-smooth);" placeholder="John Doe">
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label for="email" style="display: block; margin-bottom: 10px; font-weight: 600; color: var(--text-primary);">Email Address *</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 16px; border: 2px solid rgba(45, 106, 79, 0.2); border-radius: 12px; font-size: 1rem; font-family: 'Lato', sans-serif; transition: var(--transition-smooth);" placeholder="john@example.com">
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label for="phone" style="display: block; margin-bottom: 10px; font-weight: 600; color: var(--text-primary);">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" style="width: 100%; padding: 16px; border: 2px solid rgba(45, 106, 79, 0.2); border-radius: 12px; font-size: 1rem; font-family: 'Lato', sans-serif; transition: var(--transition-smooth);" placeholder="+1 (234) 567-8900">
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label for="interest" style="display: block; margin-bottom: 10px; font-weight: 600; color: var(--text-primary);">I'm Interested In *</label>
+                        <select id="interest" name="interest" required style="width: 100%; padding: 16px; border: 2px solid rgba(45, 106, 79, 0.2); border-radius: 12px; font-size: 1rem; font-family: 'Lato', sans-serif; transition: var(--transition-smooth); background: white;">
+                            <option value="">Please select...</option>
+                            <option value="program">Joining a Program</option>
+                            <option value="volunteer">Volunteering</option>
+                            <option value="partner">Partnership Opportunities</option>
+                            <option value="donate">Making a Donation</option>
+                            <option value="other">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label for="message" style="display: block; margin-bottom: 10px; font-weight: 600; color: var(--text-primary);">Message *</label>
+                        <textarea id="message" name="message" required rows="6" style="width: 100%; padding: 16px; border: 2px solid rgba(45, 106, 79, 0.2); border-radius: 12px; font-size: 1rem; font-family: 'Lato', sans-serif; resize: vertical; transition: var(--transition-smooth);" placeholder="Tell us about your interest..."></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 30px;">
+                        <label style="display: flex; align-items: center; cursor: pointer;">
+                            <input type="checkbox" required style="width: 20px; height: 20px; margin-right: 10px; cursor: pointer;">
+                            <span style="color: var(--text-secondary); font-size: 0.95rem;">I agree to receive communications from INDUMISO Foundation *</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="cta-button" style="width: 100%; margin-top: 10px;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+
+                <p style="text-align: center; margin-top: 30px; color: var(--text-light); font-size: 0.95rem;">
+                    We typically respond within 24-48 hours. For urgent matters, please call us directly.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="programs" style="background: var(--bg-primary);">
+        <div class="container">
+            <h2 class="section-title">Other Ways to Reach Us</h2>
+            
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-content" style="padding: 50px 36px; text-align: center;">
+                        <div style="font-size: 3.5rem; color: var(--accent); margin-bottom: 20px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p style="margin-bottom: 20px;">For general inquiries and program information</p>
+                        <a href="mailto:info@indumiso.org" style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">info@indumiso.org</a>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">Response time: 24-48 hours</p>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-content" style="padding: 50px 36px; text-align: center;">
+                        <div style="font-size: 3.5rem; color: var(--accent); margin-bottom: 20px;">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p style="margin-bottom: 20px;">Speak directly with our team</p>
+                        <a href="tel:+1234567890" style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">+1 (234) 567-890</a>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">Mon-Fri: 8AM - 5PM SAST</p>
+                    </div>
+                </div>
+
+                <div class="program-card">
+                    <div class="program-content" style="padding: 50px 36px; text-align: center;">
+                        <div style="font-size: 3.5rem; color: var(--accent); margin-bottom: 20px;">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p style="margin-bottom: 20px;">Our headquarters</p>
+                        <p style="color: var(--text-secondary); font-weight: 600;">123 Community Street<br>Johannesburg, Gauteng 2001<br>South Africa</p>
+                        <p style="margin-top: 15px; font-size: 0.9rem; color: var(--text-light);">By appointment only</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="mission" style="background: var(--white);">
+        <div class="container">
+            <h2 class="section-title">Connect on Social Media</h2>
+            
+            <div style="text-align: center; margin-bottom: 50px;">
+                <p style="font-size: 1.25rem; color: var(--text-secondary); max-width: 700px; margin: 0 auto;">
+                    Follow us for updates, success stories, and opportunities to get involved in our community transformation work.
+                </p>
+            </div>
+
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; transition: var(--transition-smooth);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; box-shadow: 0 8px 30px rgba(29, 161, 242, 0.3); transition: var(--transition-bounce);">
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                    <span style="margin-top: 15px; font-weight: 600; color: var(--text-primary);">Twitter</span>
+                </a>
+
+                <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; transition: var(--transition-smooth);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #1877F2 0%, #0d5dbf 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; box-shadow: 0 8px 30px rgba(24, 119, 242, 0.3); transition: var(--transition-bounce);">
+                        <i class="fab fa-facebook-f"></i>
+                    </div>
+                    <span style="margin-top: 15px; font-weight: 600; color: var(--text-primary);">Facebook</span>
+                </a>
+
+                <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; transition: var(--transition-smooth);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #E4405F 0%, #c42d4a 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; box-shadow: 0 8px 30px rgba(228, 64, 95, 0.3); transition: var(--transition-bounce);">
+                        <i class="fab fa-instagram"></i>
+                    </div>
+                    <span style="margin-top: 15px; font-weight: 600; color: var(--text-primary);">Instagram</span>
+                </a>
+
+                <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; transition: var(--transition-smooth);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #0A66C2 0%, #084d91 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; box-shadow: 0 8px 30px rgba(10, 102, 194, 0.3); transition: var(--transition-bounce);">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <span style="margin-top: 15px; font-weight: 600; color: var(--text-primary);">LinkedIn</span>
+                </a>
+
+                <a href="#" style="display: flex; flex-direction: column; align-items: center; text-decoration: none; transition: var(--transition-smooth);">
+                    <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #FF0000 0%, #cc0000 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 2.5rem; box-shadow: 0 8px 30px rgba(255, 0, 0, 0.3); transition: var(--transition-bounce);">
+                        <i class="fab fa-youtube"></i>
+                    </div>
+                    <span style="margin-top: 15px; font-weight: 600; color: var(--text-primary);">YouTube</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Make a Difference?</h2>
+            <p>Join thousands of individuals and organizations transforming communities through digital empowerment and sustainable development.</p>
+            <div class="cta-buttons">
+                <a href="#contact-form" class="cta-button">
+                    <i class="fas fa-edit"></i> Fill Out the Form
+                </a>
+                <a href="programs.html" class="cta-button secondary">
+                    <i class="fas fa-book-open"></i> Explore Programs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <div class="footer-logo">INDUMISO</div>
+                    <p class="footer-description">Transforming gratitude into action through digital empowerment and sustainable community development.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="it-development.html"><i class="fas fa-chevron-right"></i> IT Development</a></li>
+                        <li><a href="mission.html"><i class="fas fa-chevron-right"></i> Our Mission</a></li>
+                        <li><a href="programs.html"><i class="fas fa-chevron-right"></i> Programs</a></li>
+                        <li><a href="impact.html"><i class="fas fa-chevron-right"></i> Our Impact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><a href="mailto:info@indumiso.org"><i class="fas fa-envelope"></i> info@indumiso.org</a></li>
+                        <li><a href="tel:+1234567890"><i class="fas fa-phone"></i> +1 (234) 567-890</a></li>
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> 123 Community Street, Johannesburg, South Africa</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2026 INDUMISO Foundation. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Contact form styling on focus
+        document.querySelectorAll('input, select, textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.style.borderColor = 'var(--accent)';
+                this.style.outline = 'none';
+                this.style.boxShadow = '0 0 0 3px rgba(255, 107, 53, 0.1)';
+            });
+            
+            element.addEventListener('blur', function() {
+                this.style.borderColor = 'rgba(45, 106, 79, 0.2)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you within 24-48 hours.');
+            this.reset();
+        });
+
+        // Social media hover effect
+        document.querySelectorAll('a[href="#"]').forEach(link => {
+            const iconDiv = link.querySelector('div');
+            if (iconDiv) {
+                link.addEventListener('mouseenter', function() {
+                    iconDiv.style.transform = 'translateY(-8px) scale(1.1)';
+                });
+                link.addEventListener('mouseleave', function() {
+                    iconDiv.style.transform = 'translateY(0) scale(1)';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
