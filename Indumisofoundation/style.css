@@ -155,6 +155,9 @@ header {
     width: 40px;
     height: 40px;
     border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
 /* Hero with subtle color overlay */
@@ -690,8 +693,6 @@ a {
 @media (max-width: 768px) {
     .mobile-menu-btn {
         display: flex;
-        align-items: center;
-        justify-content: center;
     }
 
     .nav-links {
@@ -703,16 +704,23 @@ a {
         flex-direction: column;
         padding: 16px;
         gap: 4px;
-        transform: translateY(-100%);
+        transform: translateY(-8px);
         opacity: 0;
-        transition: var(--transition);
+        visibility: hidden;
+        pointer-events: none;
+        transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s ease;
         border-bottom: 1px solid var(--border-light);
         box-shadow: var(--shadow-sm);
+        z-index: 999;
+        max-height: calc(100vh - 73px);
+        overflow-y: auto;
     }
 
         .nav-links.active {
             transform: translateY(0);
             opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
         }
 
         .nav-links a {
@@ -1091,12 +1099,18 @@ section {
     }
 
     .nav-links {
-        background: rgba(247, 253, 252, 0.96);
+        background: rgba(247, 253, 252, 0.98);
         backdrop-filter: blur(16px);
     }
 
     .hero {
         min-height: 80vh;
+    }
+
+    .programs-grid,
+    .counter-grid,
+    .pillars-grid {
+        grid-template-columns: 1fr;
     }
 }
 

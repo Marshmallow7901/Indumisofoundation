@@ -11,21 +11,65 @@ function debounce(func, wait = 10) {
 function initMobileMenu() {
     const mobileMenuBtn = document.getElementById('mobileMenuBtn');
     const navLinks = document.getElementById('navLinks');
+    const header = document.querySelector('header');
     if (!mobileMenuBtn || !navLinks) return;
 
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        mobileMenuBtn.innerHTML = navLinks.classList.contains('active')
-            ? '<i class="fas fa-times"></i>'
-            : '<i class="fas fa-bars"></i>';
+    function closeMenu() {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+    function openMenu() {
+        // Sync dropdown top with actual header height
+        if (header) {
+            navLinks.style.top = header.offsetHeight + 'px';
+        }
+        navLinks.classList.add('active');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+    }
+
+    mobileMenuBtn.setAttribute('aria-controls', 'navLinks');
+    mobileMenuBtn.setAttribute('aria-expanded', 'false');
+
+    mobileMenuBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navLinks.classList.contains('active') ? closeMenu() : openMenu();
     });
 
     navLinks.querySelectorAll('a').forEach((link) => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-        });
+        link.addEventListener('click', closeMenu);
     });
+
+    // Close when clicking outside the nav
+    document.addEventListener('click', (e) => {
+        if (navLinks.classList.contains('active') &&
+            !navLinks.contains(e.target) &&
+            !mobileMenuBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            closeMenu();
+            mobileMenuBtn.focus();
+        }
+    });
+
+    // Re-sync top on resize
+    window.addEventListener('resize', debounce(() => {
+        if (header && navLinks.classList.contains('active')) {
+            navLinks.style.top = header.offsetHeight + 'px';
+        }
+        // Close menu if resized to desktop
+        if (window.innerWidth > 768) {
+            closeMenu();
+            navLinks.style.top = '';
+        }
+    }, 100));
 }
 
 function initHeaderState() {
