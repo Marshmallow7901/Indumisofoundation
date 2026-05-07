@@ -1,0 +1,17 @@
+[build]
+  publish = "Indumisofoundation"
+
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/:page"
+  to = "/:page.html"
+  status = 200
+
+[[redirects]]
+  from = "/:page/"
+  to = "/:page.html"
+  status = 200
